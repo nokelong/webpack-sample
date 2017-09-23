@@ -3,7 +3,9 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var IndexCtr = require('./index');
+
+import IndexCtr from './index'
+import './main.css'
 
 ReactDOM.render(
   <IndexCtr/>,
