@@ -1,13 +1,14 @@
 const webpack = require('webpack');
+const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const webpackConfig = {
     entry:{
-    	app: __dirname + '/app/main.js'
+    	app: './app/main.js'
     },
     output:{
-    	path: __dirname + '/build',
+    	path: path.resolve(__dirname, 'build'),
     	filename: 'bundle.js' 
     },
 
@@ -45,9 +46,6 @@ const webpackConfig = {
     },
     plugins:[
         new HtmlWebpackPlugin({
-            filename: __dirname + "/build/index.html",
-            template: __dirname + "/app/index.html",
-            inject: true          
         }),
         new webpack.HotModuleReplacementPlugin(),//热加载插件
         new webpack.optimize.OccurrenceOrderPlugin(),
