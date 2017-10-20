@@ -1,14 +1,10 @@
-// const hello = require('./Hello');
-// document.querySelector('#root').appendChild(hello());
-
-var React = require('react');
-var ReactDOM = require('react-dom');
-
-import IndexCtr from './index'
-import './main.css'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Index from 'COMPONENTS/index'
+import Clock from 'COMPONENTS/clock'
 
 ReactDOM.render(
-  <IndexCtr/>,
+  <Clock />,
   document.querySelector('#root')
 );
 

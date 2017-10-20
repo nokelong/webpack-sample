@@ -1,8 +1,10 @@
 const webpack = require('webpack');
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+function resolve (dir) {
+  return path.join(__dirname, '..', dir)
+}
 
 const webpackConfig = {
     entry:{
@@ -14,6 +16,11 @@ const webpackConfig = {
     },  
     resolve: {
         extensions: ['.js', '.jsx'],
+        alias: {
+            '@': resolve('app') ,
+            'VIEWS':resolve('app/views'),        
+            'COMPONENTS':resolve('app/components')
+        }
     },
     module:{
     	rules:[{
