@@ -12,7 +12,7 @@ npm install
 npm run start
 
 # serve with hot reload at localhost:8080
-npm run server
+npm run dev
 
 ```
 ## Contribution

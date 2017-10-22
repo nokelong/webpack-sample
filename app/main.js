@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Index from 'COMPONENTS/index'
-import Clock from 'COMPONENTS/clock'
+import Toggle from 'COMPONENTS/toggle'
 
 ReactDOM.render(
-  <Clock />,
+  <Toggle />,
   document.querySelector('#root')
 );
 
