@@ -8,8 +8,8 @@ class Clock extends React.Component {
 	constructor(props) {
         super(props);
         this.state = {date: new Date()};
-        // this.stopTick = this.stopTick.bind(this);
-        // this.startTick = this.startTick.bind(this);
+        this.stopTick = this.stopTick.bind(this);
+        this.startTick = this.startTick.bind(this);
 	}
     componentDidMount() {
         console.log("this props isToggle:"+this.props.isToggle);
@@ -42,11 +42,8 @@ class Clock extends React.Component {
     	})
     }
 	render() {
-		return (
-			<div>
-			    <h1>Hello, React!</h1>
-			    <text>现在是北京时间： {this.state.date.toLocaleTimeString()}</text>                 
-			</div>
+		return (			   
+			<text>现在是北京时间： {this.state.date.toLocaleTimeString()}</text>
 		)
 	}
 }

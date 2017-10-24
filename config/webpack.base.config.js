@@ -8,7 +8,7 @@ function resolve (dir) {
 
 const webpackConfig = {
     entry:{
-    	app: './app/main.js'
+    	app: './app/main.jsx'
     },
     output:{
         path: path.resolve(__dirname, '../build'),

@@ -23,13 +23,14 @@ class Toggle extends React.Component {
     	return (
     		<div>
     		    <Clock isToggle={this.state.isToggle} ref="stopClock"/>
-                <button onClick={this.handlerClick} >
+                <button onClick={this.handlerClick} style={{marginLeft:'10px'}}>
                     {this.state.isToggle ?'on': 'off'}
-                </button>
+                </button >
                 <FlavorForm />
             </div>
     	)
     }
 }
+
 
 module.exports = Toggle;
